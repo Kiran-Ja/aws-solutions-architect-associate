@@ -4,7 +4,7 @@ Welcome to my technical proof-of-work repository. Here, I log my daily terminal 
 
 ## 🚀 Daily Lab Logs
 
-### Day 1 (07/02): Identity & Access Management (IAM) & AWS CLI Setup
+### Day 1: Identity & Access Management (IAM) & AWS CLI Setup
 - **Concepts Learned:** Principal of Least Privilege, Root vs. IAM administrative users, and policy assignment via User Groups.
 - **Implementations:** 
   - Configured a secure `admin` IAM group with `AdministratorAccess`.
