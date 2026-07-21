@@ -12,7 +12,7 @@ Welcome to my technical proof-of-work repository. Here, I log my daily terminal 
   - Successfully connected local Windows environment to the AWS cloud infrastructure via Git Bash using the AWS CLI engine.
   - Explored serverless CLI interactions using AWS CloudShell.
  
-**Day 2: EC2 Fundamentals & Security Controls**
+### Day 2: EC2 Fundamentals & Security Controls
 **Concepts Mastered**
 
 Compute Sizing & Use Cases: Categorized EC2 instance families (General Purpose, Compute, Memory, and Storage Optimized) and decoded AWS naming conventions (m5.2xlarge).
