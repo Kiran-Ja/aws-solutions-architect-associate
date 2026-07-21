@@ -30,3 +30,25 @@ Network Security Configuration: Built custom Security Groups to regulate HTTP (8
 Remote Terminal Access: Established secure command-line connections via standard SSH using key pairs, as well as browser-based management via EC2 Instance Connect.
 
 Purchasing & Fleet Exploration: Experimented with instance lifecycle configurations, comparing On-Demand vs. Spot Instance request behaviors and launching options directly within the console.
+
+### Day 3: Advanced EC2 Architecture & Networking
+
+**Concepts Mastered**
+
+IP Addressing Dynamics: Differentiated between Private IPs (internal VPC routing), Public IPs (ephemeral internet access), and Elastic IPs (static IPv4 mapping), recognizing why Elastic IPs should generally be avoided in favor of DNS.
+
+Placement Group Strategies: Evaluated hardware distribution models—Cluster (low-latency, single AZ), Spread (isolated hardware, max 7 instances per AZ for high availability), and Partition (rack-isolated clusters for large-scale distributed workloads like Kafka).
+
+Elastic Network Interfaces (ENIs): Understood virtual network cards (Layer 2) bound to specific Availability Zones, used to detach and reattach secondary private IPs for fast failover.
+
+EC2 Hibernation Mechanics: Analyzed state persistence by saving instance RAM directly to an encrypted root EBS volume for rapid boot times without re-initializing the OS or application cache.
+
+**Practical Implementations**
+
+IP Address & Lifecycle Testing: Observed Public IP address re-assignment upon restarting an EC2 instance, and assigned a static Elastic IP to maintain a persistent address across state changes.
+
+Network Interface Management: Created and attached a secondary Elastic Network Interface (ENI) to a running instance, testing live failover by moving the network card to another EC2 machine within the same Availability Zone.
+
+Hardware Placement Configuration: Created and deployed EC2 instances into custom Placement Groups (Cluster, Spread, and Partition) to manipulate physical underlying hardware distribution.
+
+State Persistence & Hibernation: Provisioned an EC2 instance with an encrypted EBS root volume, enabled hibernation support, and triggered a full RAM-to-EBS dump to verify fast restoration upon startup.
